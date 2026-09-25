@@ -1,0 +1,45 @@
+{
+  "name": "genpark-multidimensional-pricing-matrix-engine-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Multi-dimensional pricing matrix evaluator resolving dynamic pricing rates across region, SLA tiers, and committed volume curves inspired by Metronome.",
+  "homepage": "https://genpark.ai/mcp",
+  "author": "alphaparkinc",
+  "category": "billing-intelligence",
+  "tags": [
+    "pricing-matrix",
+    "multidimensional-pricing",
+    "usage-based-billing",
+    "sla-tiers",
+    "metronome"
+  ],
+  "inputs": {
+    "model": {
+      "type": "string",
+      "default": "claude-3-7-sonnet"
+    },
+    "region": {
+      "type": "string",
+      "default": "eu-west-1"
+    },
+    "sla_tier": {
+      "type": "string",
+      "default": "enterprise_99_99"
+    }
+  },
+  "outputs": {
+    "matrix_evaluation_id": {
+      "type": "string"
+    },
+    "total_billing_usd": {
+      "type": "number"
+    },
+    "blended_effective_rate_per_1k": {
+      "type": "number"
+    },
+    "pricing_matrix_status": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
